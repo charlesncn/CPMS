@@ -126,6 +126,14 @@ public class AddActivity extends AppCompatActivity {
                             date_today.getText().toString().trim(),
                             supplier.getText().toString().trim(),
                             Integer.parseInt(project_id.getText().toString().trim()));
+
+//                    clear textviewa
+                    item_name.setText("");
+                    cost.setText("");
+                    quantity.setText("");
+                    description.setText("");
+                    date_today.setText("");
+                    supplier.setText("");
                 }
             }
         });

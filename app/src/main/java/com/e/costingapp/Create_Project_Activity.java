@@ -150,6 +150,12 @@ public class Create_Project_Activity extends AppCompatActivity {
                         pj_location.getText().toString().trim(),
                         Integer.parseInt(pj_cost.getText().toString().trim()));
 
+                pj_name.setText("");
+                pj_cost.setText("");
+                s_date.setText("");
+                e_date.setText("");
+                pj_location.setText("");
+
             }
         });
 

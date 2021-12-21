@@ -40,8 +40,8 @@
 
             <TextView
                 android:id="@+id/tv_name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="150dp"
+                android:layout_height="20dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="8dp"
                 android:fontFamily="@font/roboto"
@@ -56,20 +56,20 @@
                 android:id="@+id/tv_date_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="8dp"
                 android:background="#F5F5F5"
                 android:fontFamily="@font/roboto"
                 android:text="12/07/2020"
                 android:textColor="#000"
-                android:textSize="14sp"
+                android:textSize="12sp"
                 android:textStyle="normal"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/linearLayout7" />
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
 
             <TextView
                 android:id="@+id/tv_start_date"
-                android:layout_width="303dp"
+                android:layout_width="295dp"
                 android:layout_height="39dp"
                 android:layout_marginBottom="8dp"
                 android:fontFamily="@font/roboto"
@@ -127,9 +127,9 @@
                     android:text="supplier :  " />
 
                 <TextView
-                    android:id="@+id/textView12"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_supp"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:text="asl ltd" />
             </LinearLayout>
@@ -139,24 +139,26 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:layout_marginEnd="128dp"
+                android:layout_marginEnd="16dp"
                 android:orientation="horizontal"
+                android:textAlignment="textEnd"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout9">
 
                 <TextView
                     android:id="@+id/textView15"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Qtt :  " />
+                    android:text="quantity :     " />
 
                 <TextView
-                    android:id="@+id/textView16"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/tv_r_qtt"
+                    android:layout_width="120dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="234000" />
+                    android:text="234000"
+                    android:textAlignment="viewEnd" />
             </LinearLayout>
 
             <LinearLayout
@@ -173,7 +175,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="total cost :  " />
+                    android:text="total cost :   " />
 
                 <TextView
                     android:id="@+id/tv_cost"
@@ -185,6 +187,32 @@
                     android:textColor="#000"
                     android:textSize="16sp"
                     android:textStyle="normal" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="unit price :   " />
+
+                <TextView
+                    android:id="@+id/tv_price"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="65,000"
+                    android:textAlignment="viewEnd" />
             </LinearLayout>
 
             <!--            <View-->

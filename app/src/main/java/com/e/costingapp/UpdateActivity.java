@@ -105,6 +105,10 @@ public class UpdateActivity extends AppCompatActivity {
                 my_date = date_today.getText().toString().trim();
                 supplier = item_supplier2.getText().toString().trim();
                 myDb.updateData(id, name, cost, quantity, description, my_date, supplier);
+
+                Intent intent = new Intent(UpdateActivity.this, MainActivity.class);
+                startActivity(intent);
+                finish();
             }
         });
 

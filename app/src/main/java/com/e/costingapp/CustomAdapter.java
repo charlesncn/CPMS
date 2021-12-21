@@ -20,6 +20,12 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
     private ArrayList item_id, item_name, item_cost, item_qtt, item_desc, item_date, item_supplier;
     Activity activity;
 
+//    if(!item_cost.equals("") && !quantity.getText().toString().trim().equals("")){
+//        double cost = Double.parseDouble(String.valueOf(item_cost)) * Double.parseDouble(String.valueOf(item_qtt));
+//        String totalCost = String.valueOf(cost);
+//    }
+
+
 
     CustomAdapter(Activity activity, Context context, ArrayList item_id, ArrayList item_name, ArrayList item_cost, ArrayList item_qtt,
                    ArrayList item_desc, ArrayList item_date, ArrayList item_supplier){
@@ -49,9 +55,11 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
         holder.item_id_txt.setText(String.valueOf(item_id.get(position)));
         holder.item_name_txt.setText(String.valueOf(item_name.get(position)));
         holder.item_cost_txt.setText(String.valueOf(item_cost.get(position)));
-//        holder.item_qtt_txt.setText(String.valueOf(item_qtt.get(position)));
+//        holder.item_unit_cost_txt.setText(String.valueOf(item_cost.get(position)));
+        holder.item_qtt_txt.setText(String.valueOf(item_qtt.get(position)));
         holder.item_desc_txt.setText(String.valueOf(item_desc.get(position)));
         holder.item_date_txt.setText(String.valueOf(item_date.get(position)));
+        holder.item_supplier_txt.setText(String.valueOf(item_supplier.get(position)));
         holder.mainLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -77,15 +85,19 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
-        TextView item_id_txt, item_name_txt, item_cost_txt, item_desc_txt, item_date_txt, item_qtt_txt;
+        TextView item_id_txt, item_name_txt, item_cost_txt, item_desc_txt, item_date_txt, item_qtt_txt,item_supplier_txt;
         LinearLayout mainLayout;
+
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
+
             item_id_txt = itemView.findViewById(R.id.tv_id);
             item_name_txt = itemView.findViewById(R.id.tv_name);
             item_cost_txt = itemView.findViewById(R.id.tv_cost);
             item_desc_txt = itemView.findViewById(R.id.tv_start_date);
             item_date_txt = itemView.findViewById(R.id.tv_date_1);
+            item_qtt_txt = itemView.findViewById(R.id.tv_r_qtt);
+            item_supplier_txt = itemView.findViewById(R.id.tv_supp);
             mainLayout = itemView.findViewById(R.id.mainLayout);
         }
     }
