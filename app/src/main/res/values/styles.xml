@@ -4,7 +4,7 @@
         <!-- Customize your theme here. -->
         <item name="colorPrimary">#737373</item>
         <item name="colorPrimaryDark">#293657</item>
-        <item name="colorAccent">#000000</item>
+        <item name="colorAccent">#293657</item>
     </style>
     <style name="Divider">
         <item name="android:layout_width">match_parent</item>

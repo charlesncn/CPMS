@@ -89,6 +89,7 @@ public class ViewProjectActivity extends AppCompatActivity {
                 i.putExtra("est_cost",temp_e_cost);
 
                 startActivity(i);
+                finish();
             }
         });
 

@@ -32,7 +32,7 @@
                 android:layout_marginStart="8dp"
                 android:text="23"
                 android:textColor="#000"
-                android:textSize="24sp"
+                android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -41,14 +41,14 @@
 
             <TextView
                 android:id="@+id/tv_name"
-                android:layout_width="250dp"
+                android:layout_width="wrap_content"
                 android:layout_height="24dp"
                 android:layout_marginStart="5dp"
                 android:layout_marginTop="12dp"
                 android:fontFamily="@font/amiko"
                 android:text="The Karen Mall"
                 android:textColor="#000"
-                android:textSize="20sp"
+                android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toEndOf="@+id/tv_id"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -57,30 +57,25 @@
                 android:id="@+id/tv_status"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
                 android:layout_marginEnd="16dp"
                 android:fontFamily="@font/amiko"
                 android:text="active"
                 android:textColor="#000"
-                android:textSize="18sp"
-                android:textStyle="bold"
+                android:textSize="14sp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="@+id/tv_end_date4" />
 
             <TextView
                 android:id="@+id/tv_date_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="73dp"
+                android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
-                android:layout_marginEnd="159dp"
                 android:fontFamily="sans-serif"
                 android:text="12/07/2020"
                 android:textColor="#000"
                 android:textSize="14sp"
                 android:textStyle="normal"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toEndOf="@+id/tv_start_date"
                 app:layout_constraintTop_toBottomOf="@+id/tv_name" />
 
@@ -88,16 +83,13 @@
                 android:id="@+id/tv_date_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="12dp"
+                android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
-                android:layout_marginEnd="159dp"
                 android:fontFamily="sans-serif"
                 android:text="12/07/2020"
                 android:textColor="#000"
                 android:textSize="14sp"
                 android:textStyle="normal"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.187"
                 app:layout_constraintStart_toEndOf="@+id/tv_end_date"
                 app:layout_constraintTop_toBottomOf="@+id/tv_date_1" />
 
@@ -105,33 +97,30 @@
                 android:id="@+id/estimate_cost"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="28dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="158dp"
+                android:layout_marginStart="41dp"
+                android:layout_marginEnd="16dp"
                 android:fontFamily="sans-serif"
-                android:text="12/07/2020"
+                android:text="789000"
                 android:textColor="#000"
                 android:textSize="14sp"
                 android:textStyle="normal"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.156"
                 app:layout_constraintStart_toEndOf="@+id/tv_end_date2"
-                app:layout_constraintTop_toBottomOf="@+id/tv_date_2" />
+                app:layout_constraintTop_toTopOf="@+id/tv_end_date2" />
 
             <TextView
                 android:id="@+id/estimate_cost2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="36dp"
+                android:layout_marginStart="10dp"
                 android:layout_marginTop="8dp"
-                android:layout_marginEnd="179dp"
+                android:layout_marginEnd="16dp"
                 android:fontFamily="sans-serif"
                 android:text="5690000"
                 android:textColor="#000"
                 android:textSize="14sp"
                 android:textStyle="normal"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.218"
                 app:layout_constraintStart_toEndOf="@+id/tv_end_date3"
                 app:layout_constraintTop_toBottomOf="@+id/estimate_cost" />
 
@@ -159,7 +148,7 @@
                 android:fontFamily="sans-serif"
                 android:paddingLeft="5dp"
                 android:paddingRight="5dp"
-                android:text="expected to end"
+                android:text="to end"
                 android:textColor="#000"
                 android:textSize="14sp"
                 app:layout_constraintStart_toStartOf="parent"
@@ -170,15 +159,29 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
+                android:fontFamily="sans-serif"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="est cost"
+                android:textColor="#000"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@+id/imageView2"
+                app:layout_constraintTop_toTopOf="@+id/imageView2" />
+
+            <TextView
+                android:id="@+id/tv_end_date4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:fontFamily="sans-serif"
                 android:paddingLeft="5dp"
                 android:paddingRight="5dp"
-                android:text="estimate cost"
+                android:text="est cost"
                 android:textColor="#000"
                 android:textSize="14sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_end_date" />
+                app:layout_constraintStart_toEndOf="@+id/imageView2"
+                app:layout_constraintTop_toBottomOf="@+id/tv_name" />
 
             <TextView
                 android:id="@+id/tv_end_date3"
@@ -186,17 +189,14 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
-                android:layout_marginBottom="8dp"
                 android:fontFamily="sans-serif"
                 android:paddingLeft="5dp"
                 android:paddingRight="5dp"
                 android:text="current cost"
                 android:textColor="#000"
                 android:textSize="14sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_end_date2"
-                app:layout_constraintVertical_bias="0.0" />
+                app:layout_constraintStart_toEndOf="@+id/imageView2"
+                app:layout_constraintTop_toBottomOf="@+id/tv_end_date2" />
 
             <TextView
                 android:id="@+id/tv_qtt"
@@ -225,16 +225,30 @@
                 tools:layout_editor_absoluteY="8dp" />
 
             <ImageView
-                android:id="@+id/imageView"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:id="@+id/imageView2"
+                android:layout_width="213dp"
+                android:layout_height="76dp"
+                android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
-                android:layout_marginEnd="16dp"
-                android:layout_marginBottom="10dp"
+                android:layout_marginBottom="12dp"
+                android:src="@drawable/graph1"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_status"
-                android:src="@drawable/index" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_end_date" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="12dp"
+                android:fontFamily="sans-serif"
+                android:text="within budget"
+                android:textColor="#05BA4D"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageView2"
+                app:layout_constraintTop_toBottomOf="@+id/tv_end_date3" />
 
             <!--            <View-->
             <!--                style="@style/Divider"-->

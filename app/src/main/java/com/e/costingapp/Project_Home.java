@@ -60,8 +60,8 @@ public class Project_Home extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         tabLayout = findViewById(R.id.tab_layout);
-        tabLayout.addTab(tabLayout.newTab().setText("projects"));
-        tabLayout.addTab(tabLayout.newTab().setText("analysis"));
+        tabLayout.addTab(tabLayout.newTab().setText("Construction Projects Dashboard"));
+//        tabLayout.addTab(tabLayout.newTab().setText(""));
 
 
         new_customAdapter = new New_CustomAdapter( this, pj_id, pj_name, pj_start, pj_end, pj_location, pj_cost);

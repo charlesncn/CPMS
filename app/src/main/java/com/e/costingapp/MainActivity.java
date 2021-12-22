@@ -102,6 +102,8 @@ public class MainActivity extends AppCompatActivity {
         e_date.setText(result_e_date);
         e_cost.setText(result_est_cost);
 
+
+
         storeDataInArray();
 
 //        go back
@@ -120,8 +122,13 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if(ContextCompat.checkSelfPermission(MainActivity.this,
                         Manifest.permission.WRITE_EXTERNAL_STORAGE)== PackageManager.PERMISSION_GRANTED){
-                    Intent intent= new Intent(MainActivity.this, AddActivity.class);
-                    startActivity(intent);
+
+                    Intent i=new Intent(MainActivity.this, AddActivity.class);
+                    String temp_id = pj_id.getText().toString();
+                    i.putExtra("p_id",temp_id);
+
+                    startActivity(i);
+
 
                 }
                 else{
@@ -132,6 +139,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
+
 
 
     @Override

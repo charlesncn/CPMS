@@ -30,9 +30,10 @@ public class AddActivity extends AppCompatActivity {
 
     TextView disclaimer;
     LinearLayout back_icon;
-    TextInputEditText project_id, item_name, cost, quantity, description, supplier, total;
+    TextInputEditText item_name, cost, quantity, description, supplier, total;
+    String id;
     Button delete, add;
-    TextView date_today, last_update;
+    TextView date_today, last_update, project_id;
     Spinner pj_status;
     DigitalClock time;
 
@@ -76,6 +77,15 @@ public class AddActivity extends AppCompatActivity {
         delete = findViewById(R.id.delete_pj);
         add = findViewById(R.id.update_pj);
 
+//      get project id automatically
+
+//      getting data from ViewProjectActivity.
+        Intent intent = getIntent();
+
+        String result_P_id = intent.getStringExtra("p_id");
+
+        project_id.setText(result_P_id);
+
 //        call method to find total
         getTotal();
 
@@ -99,13 +109,13 @@ public class AddActivity extends AppCompatActivity {
 //        get id
 
 
-        int passed_id_int;
-        String passed_id;
-
-        Intent intent = new Intent();
-        passed_id = intent.getStringExtra("my_id");
-//        passed_id_int = Integer.parseInt(passed_id);
-        project_id.setText(passed_id);
+//        int passed_id_int;
+//        String passed_id;
+//
+//        Intent intent = new Intent();
+//        passed_id = intent.getStringExtra("my_id");
+////        passed_id_int = Integer.parseInt(passed_id);
+//        project_id.setText(passed_id);
 
 
         add.setOnClickListener(new View.OnClickListener() {
@@ -125,9 +135,11 @@ public class AddActivity extends AppCompatActivity {
                             description.getText().toString().trim(),
                             date_today.getText().toString().trim(),
                             supplier.getText().toString().trim(),
-                            Integer.parseInt(project_id.getText().toString().trim()));
+                            Integer.parseInt(project_id.getText().toString().trim())
 
-//                    clear textviewa
+                    );
+
+//                    clear textview
                     item_name.setText("");
                     cost.setText("");
                     quantity.setText("");
@@ -139,6 +151,9 @@ public class AddActivity extends AppCompatActivity {
         });
 
     }
+
+
+
 
 
     @Override

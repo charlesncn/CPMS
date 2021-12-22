@@ -156,15 +156,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
-                android:hint="Project number"
+                android:hint="Project number NOT EDITABLE"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
-                <com.google.android.material.textfield.TextInputEditText
+                <TextView
                     android:id="@+id/ed_id"
                     android:layout_width="match_parent"
-                    android:layout_height="52dp"
+                    android:layout_height="0dp"
+                    android:editable="false"
                     android:fontFamily="sans-serif-light"
                     android:inputType="number"
                     android:paddingLeft="5dp"
