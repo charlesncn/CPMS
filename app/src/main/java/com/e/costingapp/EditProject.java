@@ -17,7 +17,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 
-public class ViewProjectActivity extends AppCompatActivity {
+public class EditProject extends AppCompatActivity {
 
     TextView disclaimer;
     LinearLayout back_icon;
@@ -33,7 +33,7 @@ public class ViewProjectActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_view_project);
+        setContentView(R.layout.activity_edit_project);
 
 
 //        finding views of items.
@@ -56,7 +56,7 @@ public class ViewProjectActivity extends AppCompatActivity {
             public void onClick(View v) {
                 MainActivity mainActivity = new MainActivity();
                 mainActivity.finish();
-                Intent intent = new Intent(ViewProjectActivity.this, Project_Home.class);
+                Intent intent = new Intent(EditProject.this, Project_Home.class);
                 startActivity(intent);
                 finish();
             }
@@ -74,7 +74,7 @@ public class ViewProjectActivity extends AppCompatActivity {
             public void onClick(View v) {
 //                Intent intent= new Intent(ViewProjectActivity.this, MainActivity.class);
 //                startActivity(intent);
-                Intent i=new Intent(ViewProjectActivity.this, MainActivity.class);
+                Intent i=new Intent(EditProject.this, MainActivity.class);
                 String temp_name = pj_name.getText().toString();
                 String temp_id = pj_id.getText().toString();
                 String temp_loci = pj_location.getText().toString();
