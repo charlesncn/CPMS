@@ -280,7 +280,7 @@
             android:layout_height="27dp"
             android:layout_marginTop="24dp"
             android:fontFamily="@font/roboto"
-            android:text="Analysis"
+            android:text="AnalysisTab"
             android:textColor="#000000"
             android:textSize="20sp" />
 
