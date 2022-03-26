@@ -22,6 +22,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -42,8 +43,12 @@ public class MainActivity extends AppCompatActivity {
 //    FragmentManager fm;
     FloatingActionButton addbutton;
     TextView pj_name, pj_id, location, s_date, e_date, e_cost, c_cost;
-    ImageView back;
-//    LinearLayout back_btn;
+    LinearLayout back;
+    LinearLayout lledit,llanalysis;
+
+//  hold intent data.
+    String id, name, start_d, end_d, loci, cost;
+
     private int STORAGE_PERMISSION_CODE= 1;
 //    MenuItem reload;
 
@@ -65,7 +70,38 @@ public class MainActivity extends AppCompatActivity {
         e_cost =findViewById(R.id.tv_e_cost);
         c_cost =findViewById(R.id.tv_c_cost);
 
+        lledit = findViewById(R.id.lledit);
+        llanalysis = findViewById(R.id.llanalysis);
+
         recyclerView = findViewById(R.id.recyclerview1);
+
+
+
+
+
+
+
+//      getting data from ViewProjectActivity.
+        Intent intent = getIntent();
+        String result_name = intent.getStringExtra("name");
+        String result_id = intent.getStringExtra("id");
+        String result_loci = intent.getStringExtra("loci");
+        String result_s_date = intent.getStringExtra("start_d");
+        String result_e_date = intent.getStringExtra("end_d");
+        String result_est_cost = intent.getStringExtra("cost");
+//        int id_to_int = Integer.parseInt(result_id);
+        pj_name.setText(result_name);
+        pj_id.setText(result_id);
+        location.setText(result_loci);
+        s_date.setText(result_s_date);
+        e_date.setText(result_e_date);
+        e_cost.setText(result_est_cost);
+
+        getAndSetIntentData();
+
+
+
+
 
 
         myDB =new MyDatabaseHelper1(MainActivity.this);
@@ -87,20 +123,20 @@ public class MainActivity extends AppCompatActivity {
 
 
 //      getting data from ViewProjectActivity.
-        Intent intent = getIntent();
-        String result_name = intent.getStringExtra("name");
-        String result_id = intent.getStringExtra("id");
-        String result_loci = intent.getStringExtra("location");
-        String result_s_date = intent.getStringExtra("st_date");
-        String result_e_date = intent.getStringExtra("ed_date");
-        String result_est_cost = intent.getStringExtra("est_cost");
+        Intent new_Intent = getIntent();
+        String new_Result_name = new_Intent.getStringExtra("name");
+        String new_Result_id = new_Intent.getStringExtra("id");
+        String new_Result_loci = new_Intent.getStringExtra("loci");
+        String new_Result_s_date = new_Intent.getStringExtra("start_d");
+        String new_Result_e_date = new_Intent.getStringExtra("end_d");
+        String new_Result_est_cost = new_Intent.getStringExtra("cost");
 //        int id_to_int = Integer.parseInt(result_id);
-        pj_name.setText(result_name);
-        pj_id.setText(result_id);
-        location.setText(result_loci);
-        s_date.setText(result_s_date);
-        e_date.setText(result_e_date);
-        e_cost.setText(result_est_cost);
+        pj_name.setText(new_Result_name);
+        pj_id.setText(new_Result_id);
+        location.setText(new_Result_loci);
+        s_date.setText(new_Result_s_date);
+        e_date.setText(new_Result_e_date);
+        e_cost.setText(new_Result_est_cost);
 
 
 
@@ -138,7 +174,71 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+//        button to open edit project
+        lledit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(MainActivity.this, EditProject.class);
+                String temp_name = pj_name.getText().toString();
+                String temp_id = pj_id.getText().toString();
+                String temp_loci = location.getText().toString();
+                String temp_s_date = s_date.getText().toString();
+                String temp_e_date = e_date.getText().toString();
+                String temp_e_cost = e_cost.getText().toString();
+                i.putExtra("name",temp_name);
+                i.putExtra("id",temp_id);
+                i.putExtra("start_d",temp_s_date);
+                i.putExtra("end_d",temp_e_date);
+                i.putExtra("loci",temp_loci);
+                i.putExtra("cost",temp_e_cost);
+                startActivity(i);
+            }
+        });
+
+//        button to open project analytics
+        llanalysis.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(MainActivity.this, view_Project.class);
+                startActivity(i);
+                finish();
+            }
+        });
+
     }
+
+
+
+
+
+
+    void getAndSetIntentData() {
+        if (getIntent().hasExtra("id") || getIntent().hasExtra("name") || getIntent().hasExtra("start_d")
+                || getIntent().hasExtra("end_d") || getIntent().hasExtra("loci") || getIntent().hasExtra("cost")) {
+
+//          getting data from intent
+            id = getIntent().getStringExtra("id");
+            name = getIntent().getStringExtra("name");
+            start_d = getIntent().getStringExtra("start_d");
+            end_d = getIntent().getStringExtra("end_d");
+            loci = getIntent().getStringExtra("loci");
+            cost = getIntent().getStringExtra("cost");
+
+//            setting data to the intent
+            pj_id.setText(id);
+            pj_name.setText(name);
+            s_date.setText(start_d);
+            e_date.setText(end_d);
+            location.setText(loci);
+            e_cost.setText(cost);
+
+        }
+        else{
+            Toast.makeText(this, "No data", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+
 
 
 
@@ -256,4 +356,6 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
+
+
 }

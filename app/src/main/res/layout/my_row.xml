@@ -46,7 +46,7 @@
                 android:layout_marginTop="8dp"
                 android:fontFamily="@font/roboto"
                 android:text="Item 1"
-                android:textColor="#000"
+                android:textColor="@color/myPri_Orange"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
@@ -61,7 +61,7 @@
                 android:background="#F5F5F5"
                 android:fontFamily="@font/roboto"
                 android:text="12/07/2020"
-                android:textColor="#000"
+                android:textColor="@color/dark_blue"
                 android:textSize="12sp"
                 android:textStyle="normal"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -76,7 +76,7 @@
                 android:paddingLeft="5dp"
                 android:paddingRight="5dp"
                 android:text="Neque porro quisquam est qui dolorem ipsum quia dolor sit"
-                android:textColor="#000"
+                android:textColor="@color/dark_blue"
                 android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -124,14 +124,16 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="supplier :  " />
+                    android:text="supplier :  "
+                    android:textColor="@color/dark" />
 
                 <TextView
                     android:id="@+id/tv_supp"
                     android:layout_width="100dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="asl ltd" />
+                    android:text="asl ltd"
+                    android:textColor="@color/dark_blue" />
             </LinearLayout>
 
             <LinearLayout
@@ -150,7 +152,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="quantity :     " />
+                    android:text="quantity :     "
+                    android:textColor="@color/dark" />
 
                 <TextView
                     android:id="@+id/tv_r_qtt"
@@ -158,7 +161,8 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="234000"
-                    android:textAlignment="viewEnd" />
+                    android:textAlignment="viewEnd"
+                    android:textColor="@color/dark_blue" />
             </LinearLayout>
 
             <LinearLayout
@@ -175,7 +179,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="total cost :   " />
+                    android:text="total cost :   "
+                    android:textColor="@color/dark" />
 
                 <TextView
                     android:id="@+id/tv_cost"
@@ -184,7 +189,7 @@
                     android:fontFamily="@font/roboto"
                     android:text="34000"
                     android:textAlignment="textEnd"
-                    android:textColor="#000"
+                    android:textColor="@color/dark_blue"
                     android:textSize="16sp"
                     android:textStyle="normal" />
             </LinearLayout>
@@ -204,7 +209,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="unit price :   " />
+                    android:text="unit price :   "
+                    android:textColor="@color/dark" />
 
                 <TextView
                     android:id="@+id/tv_price"
@@ -212,7 +218,8 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="65,000"
-                    android:textAlignment="viewEnd" />
+                    android:textAlignment="viewEnd"
+                    android:textColor="@color/dark_blue" />
             </LinearLayout>
 
             <!--            <View-->

@@ -2,9 +2,10 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">#737373</item>
-        <item name="colorPrimaryDark">#293657</item>
-        <item name="colorAccent">#293657</item>
+        <item name="colorPrimary">#009688</item>
+        <item name="colorPrimaryDark">#EAF5F8</item>
+        <item name="colorAccent">#4CAF50</item>
+
     </style>
     <style name="Divider">
         <item name="android:layout_width">match_parent</item>

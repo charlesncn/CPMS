@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".Create_Project_Activity"
     android:orientation="vertical"
-    android:background="#293657">
+    android:background="#EAF5F8">
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -16,32 +16,33 @@
         android:orientation="horizontal">
 
 
+
         <LinearLayout
             android:id="@+id/go_back"
-            android:layout_width="66dp"
-            android:layout_height="25dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="18dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="19dp"
             android:clickable="true"
-            android:focusableInTouchMode="true"
-            android:gravity="center_vertical"
             android:orientation="horizontal"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
             <ImageView
-                android:id="@+id/back_btn2"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:layout_marginStart="4dp"
-                android:src="@drawable/icon_go_back" />
+                android:id="@+id/img"
+                android:layout_width="30dp"
+                android:layout_height="40dp"
+                android:contentDescription="TODO"
+                android:src="@drawable/icon_back" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="back"
-                android:textColor="#fff"
-                android:textSize="16sp" />
+                android:layout_marginTop="8dp"
+                android:text="Back"
+                android:textColor="@color/myPri_Orange"
+                android:textSize="18sp" />
+
         </LinearLayout>
 
         <TextView
@@ -50,10 +51,10 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="18dp"
             android:layout_marginEnd="20dp"
-            android:fontFamily="@font/amiko"
-            android:text="project creation panel"
-            android:textColor="#fff"
-            android:textSize="20sp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="create project"
+            android:textColor="@color/dark_blue"
+            android:textSize="30sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -68,7 +69,6 @@
             app:srcCompat="@drawable/icon_image" />
 
 
-
         <TextView
             android:id="@+id/textView17"
             android:layout_width="wrap_content"
@@ -77,7 +77,7 @@
             android:layout_marginBottom="20dp"
             android:fontFamily="@font/antic"
             android:text="upload image"
-            android:textColor="#fff"
+            android:textColor="@color/dark"
             android:textSize="18sp"
             app:layout_constraintBottom_toTopOf="@+id/ai_update_date"
             app:layout_constraintStart_toStartOf="parent"
@@ -91,9 +91,9 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="20dp"
             android:fontFamily="@font/antic"
-            android:text="10:45 am"
             android:inputType="time"
-            android:textColor="#fff"
+            android:text="10:45 am"
+            android:textColor="@color/dark"
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_e_date" />
@@ -105,9 +105,9 @@
             android:layout_marginTop="40dp"
             android:layout_marginEnd="20dp"
             android:fontFamily="@font/antic"
-            android:text="06/04/2020"
             android:inputType="date"
-            android:textColor="#fff"
+            android:text="06/04/2020"
+            android:textColor="@color/dark"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editing_panel" />

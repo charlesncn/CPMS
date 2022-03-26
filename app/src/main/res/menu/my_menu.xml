@@ -9,15 +9,15 @@
     <item android:id="@+id/delete_all"
         android:title="Delete All"
         android:icon="@drawable/icon_delete_forever"
-        android:iconTint="#fff"/>
+        android:iconTint="@color/dark"/>
     <item android:id="@+id/share_this"
         android:title="Share"
         android:icon="@drawable/icon_share"
-        android:iconTint="#fff"/>
+        android:iconTint="@color/dark_blue"/>
     <item android:id="@+id/logout"
         android:title="Logout"
         android:icon="@drawable/icon_logout"
-        android:iconTint="#fff"/>
+        android:iconTint="@color/dark"/>
 
 
 

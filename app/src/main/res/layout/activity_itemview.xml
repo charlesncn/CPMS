@@ -4,10 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
+    android:background="#EAF5F8"
     android:gravity="center_horizontal"
     android:orientation="vertical"
     tools:context=".Itemview">
+
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
@@ -16,36 +17,25 @@
         android:background="@drawable/topbg"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
 
         <TextView
-            android:id="@+id/editing_panel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="72dp"
-            android:fontFamily="@font/roboto_medium"
-            android:text="items dashboard"
-            android:textColor="#fff"
-            android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
             android:id="@+id/tv_pjname"
             android:layout_width="wrap_content"
-            android:layout_height="27dp"
-            android:layout_marginTop="24dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
             android:fontFamily="@font/roboto"
             android:text="Jf apertments"
-            android:textColor="#fff"
-            android:textSize="20sp"
+            android:textColor="@color/dark"
+            android:textSize="30sp"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editing_panel" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <LinearLayout
             android:id="@+id/linearLayout2"
@@ -63,7 +53,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/roboto"
                 android:text="project No :  "
-                android:textColor="#CDCDCD"
+                android:textColor="@color/dark"
                 android:textSize="14sp" />
 
             <TextView
@@ -72,7 +62,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/roboto"
                 android:text="2"
-                android:textColor="#fff"
+                android:textColor="@color/dark_blue"
                 android:textSize="15sp" />
         </LinearLayout>
 
@@ -92,7 +82,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/roboto"
                 android:text="location :  "
-                android:textColor="#CDCDCD"
+                android:textColor="@color/dark"
                 android:textSize="14sp" />
 
             <TextView
@@ -101,7 +91,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/roboto"
                 android:text="Upperhill"
-                android:textColor="#fff"
+                android:textColor="@color/dark_blue"
                 android:textSize="15sp" />
         </LinearLayout>
 
@@ -121,7 +111,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/roboto"
                 android:text="start date :  "
-                android:textColor="#CDCDCD"
+                android:textColor="@color/dark"
                 android:textSize="14sp" />
 
             <TextView
@@ -131,7 +121,7 @@
                 android:fontFamily="@font/roboto"
                 android:inputType="date"
                 android:text="06/04/2020"
-                android:textColor="#fff"
+                android:textColor="@color/dark_blue"
                 android:textSize="15sp"
                 tools:ignore="TouchTargetSizeCheck" />
         </LinearLayout>
@@ -151,7 +141,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/roboto"
                 android:text="end date :   "
-                android:textColor="#CDCDCD"
+                android:textColor="@color/dark"
                 android:textSize="14sp" />
 
             <TextView
@@ -163,7 +153,7 @@
                 android:fontFamily="@font/roboto"
                 android:inputType="date"
                 android:text="06/04/2022"
-                android:textColor="#fff"
+                android:textColor="@color/dark_blue"
                 android:textSize="15sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 tools:ignore="TouchTargetSizeCheck" />
@@ -185,7 +175,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/roboto"
                 android:text="estmate cost :  "
-                android:textColor="#CDCDCD"
+                android:textColor="@color/dark"
                 android:textSize="14sp" />
 
             <TextView
@@ -194,7 +184,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/roboto"
                 android:text="2,760,000"
-                android:textColor="#fff"
+                android:textColor="@color/dark_blue"
                 android:textSize="15sp" />
         </LinearLayout>
 
@@ -213,7 +203,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/roboto"
                 android:text="current cost :  "
-                android:textColor="#CDCDCD"
+                android:textColor="@color/dark"
                 android:textSize="14sp" />
 
             <TextView
@@ -222,7 +212,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/roboto"
                 android:text="2,760,000"
-                android:textColor="#fff"
+                android:textColor="@color/dark_blue"
                 android:textSize="15sp" />
         </LinearLayout>
 
@@ -247,23 +237,32 @@
             android:id="@+id/go_back"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="19dp"
+            android:clickable="true"
             android:orientation="horizontal"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
             <ImageView
-                android:id="@+id/go_back"
+                android:id="@+id/img"
                 android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:layout_height="40dp"
                 android:contentDescription="TODO"
-                android:src="@drawable/back_icon"
-                app:layout_constraintStart_toStartOf="parent" />
+                android:src="@drawable/icon_back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Back"
+                android:textColor="@color/myPri_Orange"
+                android:textSize="18sp" />
+
         </LinearLayout>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
 
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -271,7 +270,7 @@
         android:layout_alignParentBottom="true"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="8dp"
-        android:background="@drawable/round_white_bg"
+        android:background="#EAF5F8"
         android:orientation="vertical"
         app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
         app:layout_constraintEnd_toEndOf="parent"
@@ -296,7 +295,7 @@
                 android:id="@+id/recyclerview1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="#fff" />
+                android:background="#EAF5F8" />
         </ScrollView>
     </LinearLayout>
 

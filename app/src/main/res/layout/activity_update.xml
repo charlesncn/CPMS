@@ -7,14 +7,14 @@
     tools:context=".UpdateActivity"
     android:orientation="vertical"
     android:gravity="center_horizontal"
-    android:background="#293657">
+    android:background="#EAF5F8">
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="245dp"
         android:layout_gravity="center_horizontal"
-        android:background="@drawable/round_bottom_bg"
+        android:background="#EAF5F8"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="-19dp">
 
@@ -25,7 +25,7 @@
             android:layout_marginStart="40dp"
             android:fontFamily="@font/antic"
             android:text="upload image"
-            android:textColor="#fff"
+            android:textColor="@color/dark"
             android:textSize="18sp"
             app:layout_constraintBottom_toTopOf="@+id/edp_update_date"
             app:layout_constraintStart_toStartOf="parent"
@@ -40,7 +40,7 @@
             android:layout_marginBottom="4dp"
             android:fontFamily="sans-serif"
             android:text="last updates 30/05/2020"
-            android:textColor="#fff"
+            android:textColor="@color/dark"
             android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
@@ -75,7 +75,7 @@
             android:layout_marginEnd="20dp"
             android:fontFamily="@font/antic"
             android:text="10:45 am"
-            android:textColor="#fff"
+            android:textColor="@color/dark"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/edp_date" />
@@ -88,38 +88,40 @@
             android:layout_marginEnd="20dp"
             android:fontFamily="@font/antic"
             android:text="06/04/2020"
-            android:textColor="#fff"
+            android:textColor="@color/dark"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editing_panel" />
+
 
         <LinearLayout
             android:id="@+id/go_back"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="18dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="19dp"
             android:clickable="true"
-            android:focusableInTouchMode="true"
-            android:gravity="center_vertical"
             android:orientation="horizontal"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
             <ImageView
-                android:id="@+id/back_btn2"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:layout_marginStart="4dp"
-                android:src="@drawable/icon_go_back" />
+                android:id="@+id/img"
+                android:layout_width="30dp"
+                android:layout_height="40dp"
+                android:contentDescription="TODO"
+                android:src="@drawable/icon_back" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="back"
-                android:textColor="#fff"
-                android:textSize="16sp" />
+                android:layout_marginTop="8dp"
+                android:text="Back"
+                android:textColor="@color/myPri_Orange"
+                android:textSize="18sp" />
+
         </LinearLayout>
+
 
         <TextView
             android:id="@+id/editing_panel"
@@ -127,10 +129,11 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="18dp"
             android:layout_marginEnd="20dp"
-            android:fontFamily="@font/amiko"
+            android:fontFamily="@font/roboto_medium"
             android:text="editing panel"
-            android:textColor="#fff"
-            android:textSize="20sp"
+            android:textColor="@color/dark"
+            android:textSize="34sp"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -139,7 +142,7 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/round_top_white_bg">
+        android:background="#EAF5F8">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -278,7 +281,6 @@
                     android:layout_height="wrap_content"
                     android:inputType="textShortMessage|textLongMessage|textMultiLine"
                     android:paddingLeft="5dp"
-                    android:enabled="false"
                     android:textColor="#000"
                     android:paddingRight="5dp"
                     android:textAlignment="center" />
@@ -313,7 +315,7 @@
                 android:layout_height="45dp"
 
                 android:layout_marginTop="30dp"
-                android:background="@drawable/round_button"
+                android:background="@drawable/btn_round_sec"
                 android:text="delete"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"

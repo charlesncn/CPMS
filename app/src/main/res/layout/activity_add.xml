@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".AddActivity"
     android:orientation="vertical"
-    android:background="#293657">
+    android:background="#EAF5F8">
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -18,30 +18,30 @@
 
         <LinearLayout
             android:id="@+id/go_back"
-            android:layout_width="66dp"
-            android:layout_height="25dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="18dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="19dp"
             android:clickable="true"
-            android:focusableInTouchMode="true"
-            android:gravity="center_vertical"
             android:orientation="horizontal"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
             <ImageView
-                android:id="@+id/back_btn2"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:layout_marginStart="4dp"
-                android:src="@drawable/icon_go_back" />
+                android:id="@+id/img"
+                android:layout_width="30dp"
+                android:layout_height="40dp"
+                android:contentDescription="TODO"
+                android:src="@drawable/icon_back" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="back"
-                android:textColor="#fff"
-                android:textSize="16sp" />
+                android:layout_marginTop="8dp"
+                android:text="Back"
+                android:textColor="@color/myPri_Orange"
+                android:textSize="18sp" />
+
         </LinearLayout>
 
         <TextView
@@ -50,10 +50,10 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="18dp"
             android:layout_marginEnd="20dp"
-            android:fontFamily="@font/amiko"
-            android:text="item panel"
-            android:textColor="#fff"
-            android:textSize="20sp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="add item dashboard"
+            android:textColor="@color/dark"
+            android:textSize="28sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -75,7 +75,7 @@
             android:layout_marginBottom="4dp"
             android:fontFamily="sans-serif"
             android:text="last updates 30/05/2020"
-            android:textColor="#fff"
+            android:textColor="@color/dark"
             android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
@@ -88,7 +88,7 @@
             android:layout_marginBottom="20dp"
             android:fontFamily="@font/antic"
             android:text="upload image"
-            android:textColor="#fff"
+            android:textColor="@color/dark"
             android:textSize="18sp"
             app:layout_constraintBottom_toTopOf="@+id/ai_update_date"
             app:layout_constraintStart_toStartOf="parent"
@@ -102,9 +102,9 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="20dp"
             android:fontFamily="@font/antic"
-            android:text="10:45 am"
             android:inputType="time"
-            android:textColor="#fff"
+            android:text="10:45 am"
+            android:textColor="@color/dark"
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_e_date" />
@@ -116,9 +116,9 @@
             android:layout_marginTop="40dp"
             android:layout_marginEnd="20dp"
             android:fontFamily="@font/antic"
-            android:text="06/04/2020"
             android:inputType="date"
-            android:textColor="#fff"
+            android:text="06/04/2020"
+            android:textColor="@color/dark"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editing_panel" />
@@ -127,8 +127,8 @@
             android:id="@+id/ai_spinner"
             android:layout_width="110dp"
             android:layout_height="25dp"
-            android:layout_marginTop="12dp"
-            android:layout_marginEnd="20dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="28dp"
             android:background="@drawable/round_white_bg"
             android:entries="@array/status_array"
             android:textAlignment="textEnd"
@@ -140,7 +140,7 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/round_top_white_bg">
+        android:background="#EAF5F8">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -328,32 +328,99 @@
 
 
 
-
-
-            <Button
-                android:id="@+id/delete_pj"
-                android:layout_width="250dp"
-                android:layout_height="45dp"
-                android:fontFamily="sans-serif"
-                android:layout_marginTop="30dp"
-                android:background="@drawable/round_button"
-                android:text="delete"
-                app:layout_constraintEnd_toEndOf="parent"
+            <LinearLayout
+                android:id="@+id/ll_delete_pj"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="50dp"
+                android:background="@drawable/btn_round_sec"
+                android:orientation="horizontal"
+                android:clickable="true"
+                android:paddingLeft="20dp"
+                android:paddingTop="7dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="7dp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/update_pj" />
+                app:layout_constraintTop_toBottomOf="@+id/disclaimer_text">
 
-            <Button
-                android:id="@+id/update_pj"
-                android:layout_width="250dp"
-                android:layout_height="45dp"
-                android:fontFamily="sans-serif"
-                android:layout_marginTop="30dp"
-                android:background="@drawable/update_round_btn"
-                android:text="add"
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icon_delete_forever" />
+
+                <TextView
+                    android:id="@+id/edt_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto"
+                    android:text=" delete"
+                    android:textColor="@color/dark"
+                    android:textSize="18dp" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_update_pj"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="50dp"
+                android:background="@drawable/btn_round_pri"
+                android:orientation="horizontal"
+                android:clickable="true"
+                android:paddingTop="7dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="7dp"
+                android:paddingLeft="20dp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.504"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/disclaimer_text" />
+                app:layout_constraintTop_toBottomOf="@+id/disclaimer_text">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icon_update" />
+                <TextView
+                    android:id="@+id/edt_cancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto"
+                    android:text="update"
+                    android:textColor="@color/dark"
+                    android:textSize="18dp" />
+
+
+
+            </LinearLayout>
+
+
+
+<!--            <Button-->
+<!--                android:id="@+id/delete_pj"-->
+<!--                android:layout_width="250dp"-->
+<!--                android:layout_height="45dp"-->
+<!--                android:fontFamily="sans-serif"-->
+<!--                android:layout_marginTop="30dp"-->
+<!--                android:background="@drawable/btn_round_sec"-->
+<!--                android:text="delete"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/update_pj" />-->
+
+<!--            <Button-->
+<!--                android:id="@+id/update_pj"-->
+<!--                android:layout_width="250dp"-->
+<!--                android:layout_height="45dp"-->
+<!--                android:fontFamily="sans-serif"-->
+<!--                android:layout_marginTop="30dp"-->
+<!--                android:background="@drawable/update_round_btn"-->
+<!--                android:text="add"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintHorizontal_bias="0.504"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/disclaimer_text" />-->
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 

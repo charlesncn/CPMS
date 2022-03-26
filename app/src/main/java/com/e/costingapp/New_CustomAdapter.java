@@ -47,7 +47,7 @@ public class New_CustomAdapter extends RecyclerView.Adapter<New_CustomAdapter.My
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(context, EditProject.class);
+                Intent intent = new Intent(context, MainActivity.class);
 
                 intent.putExtra("id", String.valueOf(proj_id.get(position)));
                 intent.putExtra("name", String.valueOf(proj_name.get(position)));

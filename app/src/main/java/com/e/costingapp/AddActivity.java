@@ -32,7 +32,7 @@ public class AddActivity extends AppCompatActivity {
     LinearLayout back_icon;
     TextInputEditText item_name, cost, quantity, description, supplier, total;
     String id;
-    Button delete, add;
+    LinearLayout delete, add;
     TextView date_today, last_update, project_id;
     Spinner pj_status;
     DigitalClock time;
@@ -74,8 +74,8 @@ public class AddActivity extends AppCompatActivity {
 
         disclaimer = findViewById(R.id.disclaimer_text);
 
-        delete = findViewById(R.id.delete_pj);
-        add = findViewById(R.id.update_pj);
+        delete = findViewById(R.id.ll_delete_pj);
+        add = findViewById(R.id.ll_update_pj);
 
 //      get project id automatically
 

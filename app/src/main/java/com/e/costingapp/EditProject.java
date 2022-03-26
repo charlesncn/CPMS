@@ -20,10 +20,10 @@ import java.util.Locale;
 public class EditProject extends AppCompatActivity {
 
     TextView disclaimer;
-    LinearLayout back_icon;
+    LinearLayout back_icon, ll_update;
     TextInputEditText pj_id, pj_name, s_date, e_date, pj_location, pj_cost;
     String id, name, start_d, end_d, loci, cost;
-    Button delete, add, view_items;
+    Button delete, add;
     TextView date_today;
     DigitalClock time;
 
@@ -46,11 +46,30 @@ public class EditProject extends AppCompatActivity {
         pj_location = findViewById(R.id.ed_location);
         pj_cost = findViewById(R.id.ed_esimate_cost);
         add =findViewById(R.id.update_pj);
-        view_items =findViewById(R.id.view_items);
+        ll_update =findViewById(R.id.ll_update);
         date_today = findViewById(R.id.tv_e_date);
         time = findViewById(R.id.ai_time);
 
+
+
+//      getting data from ViewProjectActivity.
+        Intent intent = getIntent();
+        String result_name = intent.getStringExtra("name");
+        String result_id = intent.getStringExtra("id");
+        String result_loci = intent.getStringExtra("loci");
+        String result_s_date = intent.getStringExtra("start_d");
+        String result_e_date = intent.getStringExtra("end_d");
+        String result_est_cost = intent.getStringExtra("cost");
+//        int id_to_int = Integer.parseInt(result_id);
+        pj_name.setText(result_name);
+        pj_id.setText(result_id);
+        pj_location.setText(result_loci);
+        s_date.setText(result_s_date);
+        e_date.setText(result_e_date);
+        pj_cost.setText(result_est_cost);
+
         getAndSetIntentData();
+
         back_icon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -61,15 +80,15 @@ public class EditProject extends AppCompatActivity {
                 finish();
             }
         });
-//        getting time and date
-        String today_date = new SimpleDateFormat("dd/MM/yy", Locale.getDefault()).format(new Date());
-        String time_now = new SimpleDateFormat("hh:mm:ss z", Locale.getDefault()).format(new Date());
-//        set date
-        date_today.setText(today_date);
-        time.setText(time_now);
+////        getting time and date
+//        String today_date = new SimpleDateFormat("dd/MM/yy", Locale.getDefault()).format(new Date());
+//        String time_now = new SimpleDateFormat("hh:mm:ss z", Locale.getDefault()).format(new Date());
+////        set date
+//        date_today.setText(today_date);
+//        time.setText(time_now);
 
 //      open main activity
-        view_items.setOnClickListener(new View.OnClickListener() {
+        ll_update.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 //                Intent intent= new Intent(ViewProjectActivity.this, MainActivity.class);
@@ -83,10 +102,10 @@ public class EditProject extends AppCompatActivity {
                 String temp_e_cost = pj_cost.getText().toString();
                 i.putExtra("name",temp_name);
                 i.putExtra("id",temp_id);
-                i.putExtra("st_date",temp_s_date);
-                i.putExtra("ed_date",temp_e_date);
-                i.putExtra("location",temp_loci);
-                i.putExtra("est_cost",temp_e_cost);
+                i.putExtra("start_d",temp_s_date);
+                i.putExtra("end_d",temp_e_date);
+                i.putExtra("loci",temp_loci);
+                i.putExtra("cost",temp_e_cost);
 
                 startActivity(i);
                 finish();

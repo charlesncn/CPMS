@@ -6,41 +6,41 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".EditProject"
-    android:background="#293657">
+    android:background="@drawable/topbg">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="175dp"
+        android:layout_height="100dp"
+
         android:layout_gravity="center_horizontal"
         android:orientation="horizontal">
 
 
         <LinearLayout
             android:id="@+id/go_back"
-            android:layout_width="66dp"
-            android:layout_height="25dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="18dp"
-            android:clickable="true"
-            android:focusableInTouchMode="true"
-            android:gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:orientation="horizontal"
+            android:clickable="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="19dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toTopOf="parent" >
 
             <ImageView
-                android:id="@+id/back_btn2"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:layout_marginStart="4dp"
-                android:src="@drawable/icon_go_back" />
-
+                android:id="@+id/img"
+                android:layout_width="30dp"
+                android:layout_height="40dp"
+                android:contentDescription="TODO"
+                android:src="@drawable/icon_back"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="back"
-                android:textColor="#fff"
-                android:textSize="16sp" />
+                android:textColor="@color/myPri_Orange"
+                android:text="Back"
+                android:textSize="18sp"
+                android:layout_marginTop="8dp"/>
+
         </LinearLayout>
 
         <TextView
@@ -49,56 +49,56 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="18dp"
             android:layout_marginEnd="20dp"
-            android:fontFamily="@font/amiko"
+            android:fontFamily="@font/roboto_medium"
             android:text="project dashboard"
-            android:textColor="#fff"
-            android:textSize="20sp"
+            android:textColor="@color/dark"
+            android:textSize="28sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
 
-        <DigitalClock
-            android:id="@+id/ai_time"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="20dp"
-            android:fontFamily="@font/antic"
-            android:inputType="time"
-            android:text="10:45 am"
-            android:textColor="#fff"
-            android:textSize="16sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_e_date" />
+<!--        <DigitalClock-->
+<!--            android:id="@+id/ai_time"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="8dp"-->
+<!--            android:layout_marginEnd="20dp"-->
+<!--            android:fontFamily="@font/antic"-->
+<!--            android:inputType="time"-->
+<!--            android:text="10:45 am"-->
+<!--            android:textColor="#fff"-->
+<!--            android:textSize="16sp"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/tv_e_date" />-->
 
-        <TextView
-            android:id="@+id/tv_e_date"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
-            android:layout_marginEnd="20dp"
-            android:fontFamily="@font/antic"
-            android:inputType="date"
-            android:text="06/04/2020"
-            android:textColor="#fff"
-            android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editing_panel" />
+<!--        <TextView-->
+<!--            android:id="@+id/tv_e_date"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="40dp"-->
+<!--            android:layout_marginEnd="20dp"-->
+<!--            android:fontFamily="@font/antic"-->
+<!--            android:inputType="date"-->
+<!--            android:text="06/04/2020"-->
+<!--            android:textColor="#fff"-->
+<!--            android:textSize="20sp"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/editing_panel" />-->
 
-        <Button
-            android:id="@+id/view_items2"
-            android:layout_width="195dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="40dp"
-            android:background="@drawable/round_no_fill_bg"
-            android:fontFamily="sans-serif"
-            android:text="analiysis"
-            android:textColor="#FFFFFF"
-            app:layout_constraintEnd_toStartOf="@+id/tv_e_date"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/go_back" />
+<!--        <Button-->
+<!--            android:id="@+id/view_items2"-->
+<!--            android:layout_width="195dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="20dp"-->
+<!--            android:layout_marginTop="40dp"-->
+<!--            android:background="@drawable/round_no_fill_bg"-->
+<!--            android:fontFamily="sans-serif"-->
+<!--            android:text="analiysis"-->
+<!--            android:textColor="#FFFFFF"-->
+<!--            app:layout_constraintEnd_toStartOf="@+id/tv_e_date"-->
+<!--            app:layout_constraintHorizontal_bias="0.0"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/go_back" />-->
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -106,6 +106,7 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:backgroundTint="#EAF5F8"
         android:background="@drawable/round_top_white_bg">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -116,25 +117,91 @@
             android:paddingBottom="30dp">
 
 
-            <Button
-                android:id="@+id/view_items"
-                android:layout_width="195dp"
+            <LinearLayout
+                android:id="@+id/ll_update"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="25dp"
-                android:background="@drawable/round_no_fill_bg"
-                android:fontFamily="sans-serif"
-                android:text="view items"
-                android:textColor="#000"
-                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="50dp"
+                android:background="@drawable/btn_round_sec"
+                android:orientation="horizontal"
+                android:paddingLeft="20dp"
+                android:paddingTop="7dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="7dp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/disclaimer_text" />
+                app:layout_constraintTop_toBottomOf="@+id/disclaimer_text">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icon_update" />
+
+                <TextView
+                    android:id="@+id/edt_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto"
+                    android:text=" update"
+                    android:textColor="@color/dark"
+                    android:textSize="18dp" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="50dp"
+                android:background="@drawable/btn_round_pri"
+                android:orientation="horizontal"
+                android:paddingTop="7dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="7dp"
+                android:paddingLeft="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/disclaimer_text">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/edit" />
+                <TextView
+                    android:id="@+id/edt_cancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto"
+                    android:text="cancel"
+                    android:textColor="@color/dark"
+                    android:textSize="18dp" />
+
+
+
+            </LinearLayout>
+
+
+
+<!--            <Button-->
+<!--                android:id="@+id/view_items"-->
+<!--                android:layout_width="195dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="25dp"-->
+<!--                android:background="@drawable/round_no_fill_bg"-->
+<!--                android:fontFamily="sans-serif"-->
+<!--                android:text="update"-->
+<!--                android:textColor="#000"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/disclaimer_text" />-->
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/tfl_id"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
                 android:hint="project's number"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -167,7 +234,6 @@
                     android:id="@+id/ed_name"
                     android:layout_width="match_parent"
                     android:layout_height="52dp"
-                    android:enabled="false"
                     android:fontFamily="sans-serif-light"
                     android:inputType="textAutoComplete"
                     android:paddingLeft="5dp"
@@ -193,7 +259,6 @@
                     android:id="@+id/ed_start_date"
                     android:layout_width="match_parent"
                     android:layout_height="52dp"
-                    android:enabled="false"
                     android:fontFamily="sans-serif-light"
                     android:inputType="date"
                     android:paddingLeft="5dp"
@@ -218,7 +283,6 @@
                     android:id="@+id/ed_end_date"
                     android:layout_width="match_parent"
                     android:layout_height="52dp"
-                    android:enabled="false"
                     android:fontFamily="sans-serif-light"
                     android:inputType="date"
                     android:paddingLeft="5dp"
@@ -244,7 +308,6 @@
                     android:id="@+id/ed_location"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:enabled="false"
                     android:inputType="textShortMessage|textLongMessage|textMultiLine"
                     android:paddingLeft="5dp"
                     android:paddingRight="5dp"
@@ -269,7 +332,6 @@
                     android:id="@+id/ed_esimate_cost"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:enabled="false"
                     android:inputType="number"
                     android:paddingLeft="5dp"
                     android:paddingRight="5dp"
@@ -293,7 +355,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="#c5c5c5"
-                    android:enabled="false"
                     android:inputType="number"
                     android:paddingLeft="5dp"
                     android:paddingRight="5dp"

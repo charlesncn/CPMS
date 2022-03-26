@@ -3,20 +3,43 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable-mdpi/round_pri.xml" value="0.3555" />
+        <entry key="app/src/main/res/drawable/edit.xml" value="0.3005" />
+        <entry key="app/src/main/res/drawable/ic_add.xml" value="0.3555" />
+        <entry key="app/src/main/res/drawable/ic_baseline_insert_emoticon_24.xml" value="0.151" />
         <entry key="app/src/main/res/drawable/icon_add.xml" value="0.3859375" />
-        <entry key="app/src/main/res/layout/activity_add.xml" value="0.33" />
+        <entry key="app/src/main/res/drawable/icon_analytics.xml" value="0.3715" />
+        <entry key="app/src/main/res/drawable/icon_back.xml" value="0.3715" />
+        <entry key="app/src/main/res/drawable/icon_cancel.xml" value="0.3555" />
+        <entry key="app/src/main/res/drawable/icon_cancel_24.xml" value="0.3715" />
+        <entry key="app/src/main/res/drawable/icon_delete_forever.xml" value="0.3555" />
+        <entry key="app/src/main/res/drawable/icon_go_back.xml" value="0.151" />
+        <entry key="app/src/main/res/drawable/icon_image.xml" value="0.1995" />
+        <entry key="app/src/main/res/drawable/icon_refresh.xml" value="0.151" />
+        <entry key="app/src/main/res/drawable/icon_share.xml" value="0.3555" />
+        <entry key="app/src/main/res/drawable/icon_update.xml" value="0.3715" />
+        <entry key="app/src/main/res/drawable/menu_icon.xml" value="0.3715" />
+        <entry key="app/src/main/res/drawable/round_bottom_bg.xml" value="0.3555" />
+        <entry key="app/src/main/res/drawable/round_button.xml" value="0.3555" />
+        <entry key="app/src/main/res/drawable/round_top_white_bg.xml" value="0.3555" />
+        <entry key="app/src/main/res/drawable/round_white_bg.xml" value="0.3555" />
+        <entry key="app/src/main/res/layout/activity_add.xml" value="0.30297723292469353" />
         <entry key="app/src/main/res/layout/activity_create__project_.xml" value="0.20153985507246377" />
+        <entry key="app/src/main/res/layout/activity_edit_project.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_itemview.xml" value="0.3697916666666667" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.20153985507246377" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/activity_project__home.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_project__home.xml" value="0.3438368860055607" />
         <entry key="app/src/main/res/layout/activity_sign_up_.xml" value="0.3697916666666667" />
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.3697916666666667" />
         <entry key="app/src/main/res/layout/activity_update.xml" value="0.28306159420289856" />
-        <entry key="app/src/main/res/layout/activity_view_project.xml" value="0.3697916666666667" />
+        <entry key="app/src/main/res/layout/activity_view_project.xml" value="0.22" />
         <entry key="app/src/main/res/layout/fragment_analysis.xml" value="0.3697916666666667" />
         <entry key="app/src/main/res/layout/my_row.xml" value="0.33" />
-        <entry key="app/src/main/res/layout/project_row.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/project_row.xml" value="0.3557692307692308" />
+        <entry key="app/src/main/res/menu-v26/my_menu.xml" value="0.37083333333333335" />
+        <entry key="app/src/main/res/menu/menu_add_actv.xml" value="0.26614583333333336" />
+        <entry key="app/src/main/res/menu/my_menu.xml" value="0.37083333333333335" />
       </map>
     </option>
   </component>

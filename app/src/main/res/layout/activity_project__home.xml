@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Project_Home"
-    android:background="#fff">
+    android:background="#EAF5F8">
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:id="@+id/rootLayout"
@@ -22,19 +22,20 @@
                 android:layout_height="?attr/actionBarSize"
                 android:id="@+id/toolbar"
                 android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-                app:titleTextColor="#fff"
+                app:titleTextColor="@color/myPri_Orange"
                 app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-                android:background="@drawable/round_bottom_bg"/>
+                android:background="#EAF5F8"/>
 
             <com.google.android.material.tabs.TabLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
                 android:id="@+id/tab_layout"
-                app:tabIndicatorColor="#fff"
+                app:tabTextColor="@color/myPri_Orange"
+                app:tabIndicatorColor="@color/dark_blue"
                 app:tabIndicatorFullWidth="true"
                 app:tabIndicatorHeight="3dp"
-                android:background="@drawable/round_bottom_bg"/>
+                android:background="#EAF5F8"/>
 
         </com.google.android.material.appbar.AppBarLayout>
 
@@ -49,7 +50,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:background="#fff"
+                android:background="#EAF5F8"
                 android:paddingBottom="70dp" />
         </ScrollView>
 
@@ -67,7 +68,7 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="32dp"
             android:layout_marginBottom="20dp"
-            android:background="#ff0008"
+            android:backgroundTint="@color/myPri_Orange"
             android:clickable="true"
             android:focusable="true"
             android:focusableInTouchMode="true"

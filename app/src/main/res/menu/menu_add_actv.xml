@@ -6,6 +6,6 @@
         android:title="cancel"
         android:icon="@drawable/icon_cancel"
         app:showAsAction="always"
-        android:iconTint="#fff"/>
+        android:iconTint="@color/dark"/>
 
 </menu>

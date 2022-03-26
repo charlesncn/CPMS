@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#293657"
+    android:background="#EAF5F8"
     android:orientation="vertical"
     android:layout_gravity="center_vertical"
     tools:context=".SignUp_Activity">
@@ -25,7 +25,8 @@
                 android:layout_marginTop="30dp"
                 android:fontFamily="@font/chonburi"
                 android:text="SIGN UP"
-                android:textColor="#fff"
+
+                android:textColor="@color/dark"
                 android:textSize="34dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -168,7 +169,7 @@
                 android:id="@+id/submit"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
-                android:background="@drawable/round_white_bg"
+                android:background="@drawable/btn_round_pri"
                 android:layout_marginTop="30dp"
                 android:text="submit"
                 android:fontFamily="@font/aldrich"
